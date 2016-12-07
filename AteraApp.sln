@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AteraApp", "AteraApp\AteraApp.csproj", "{1CFE058C-565E-4B27-A925-21E74FAFACBE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE} = {743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AteraAppTests", "AteraAppTests\AteraAppTests.csproj", "{1C83A13E-D4FF-41A9-AA8A-A88D716EE94A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE} = {743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CFE058C-565E-4B27-A925-21E74FAFACBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFE058C-565E-4B27-A925-21E74FAFACBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFE058C-565E-4B27-A925-21E74FAFACBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFE058C-565E-4B27-A925-21E74FAFACBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C83A13E-D4FF-41A9-AA8A-A88D716EE94A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C83A13E-D4FF-41A9-AA8A-A88D716EE94A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C83A13E-D4FF-41A9-AA8A-A88D716EE94A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C83A13E-D4FF-41A9-AA8A-A88D716EE94A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
