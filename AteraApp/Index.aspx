@@ -4,24 +4,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Atera</title>
+    
 </head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <h1>Devices Page</h1>
-    </div>
-    <div>
+<body ng-app="AretaApp">
+    <div class="container">
+        <form id="form1" runat="server">
+            <div>
+                <h1>Devices Page</h1>
+            </div>
+            <div ng-controller="AteraController">
 
 
-        <form class="float_left" action="/Devices/Test" method="get">
-            <button  type="submit">Go</button>
+            </div>
+            <div id="device-list-div">
+            </div>
         </form>
-
     </div>
-    <div id="device-list-div">
-        
-    </div>
-    </form>
 </body>
 </html>

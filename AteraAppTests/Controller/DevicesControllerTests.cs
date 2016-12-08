@@ -17,7 +17,7 @@ namespace AteraApp.Tests
         {
             DevicesController dc = new DevicesController();
 
-            string strResult = dc.Test();
+            string strResult = dc.getAllDevices();
 
             Assert.IsFalse(string.IsNullOrEmpty(strResult));
         }
@@ -27,7 +27,7 @@ namespace AteraApp.Tests
         {
             DevicesController dc = new DevicesController();
 
-            string strResult = dc.Test();
+            string strResult = dc.getAllDevices();
 
             Assert.IsNull(strResult);
         }
