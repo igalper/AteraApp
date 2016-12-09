@@ -21,7 +21,7 @@ namespace DAL.Models
 
         public override string ToString()
         {
-            return $"Device Id: {Id}, Device Name: {Name}, Device Owner: {Owner}, Device TimeCreated: {Created}";
+            return $"Id: {Id}, Name: {Name}, Owner: {Owner}, Created: {Created}";
         }
     }
 }
