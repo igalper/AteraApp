@@ -6,69 +6,50 @@ using System.Net.Http;
 using System.Web.Http;
 using DAL.Models;
 using System.Web.Script.Serialization;
-
+using System.Web.Http.Results;
 
 namespace AteraApp
 {
     public class DevicesController : ApiController
     {
-        [Route("Devices")]
-        [HttpPost]
-        public string getAllDevices()
+        //[Route("Devices/GetAllDevices")]
+        [HttpGet]
+        public JsonResult<List<Device>> GetAllDevices()
         {
             var dataQueries = new DAL.DataQueries();
-            //var res = "";
-            /*foreach (Device d in dataQueries.GetAllDevices())
-            {
-                res += "{" + d.ToString()+" },";
-            }*/
-
-
-            JavaScriptSerializer js = new JavaScriptSerializer();
-            var json = js.Serialize(dataQueries.GetAllDevices());
-            return json;
-            //return res;
+            return Json(dataQueries.GetAllDevices());
         }
-        [Route("Devices/{id}")]
+
+        //[Route("Devices/GetDevicesByOwnerName")]
         [HttpPost]
-        public string getDevice([FromUri] int id)
+        public JsonResult<List<Device>> GetDevicesByOwnerName(string owner)
         {
             var dataQueries = new DAL.DataQueries();
-            var res = "";
-            List<Device> deviceList = dataQueries.GetAllDevices();
-            Device d = deviceList.Find(device => device.Id == id);
-            res += "{" + d.ToString() + " }";
-            
-
-            return res;
+            return Json(dataQueries.GetDevicesByOwnerName(owner));
         }
 
 
-        // GET api/<controller>
-        /*public IEnumerable<string> Get()
+        [HttpPost]
+        public JsonResult<Device> GetDeviceById(int id)
         {
-            return new string[] { "value1", "value2" };
-        }*/
-
-        // GET api/<controller>/5
-        /*public string Get(int id)
-        {
-            return "value";
-        }*/
-
-        // POST api/<controller>
-        /*public void Post([FromBody]string value)
-        {
-        }*/
-
-        // PUT api/<controller>/5
-        public void Put(int id, [FromBody]string value)
-        {
+            var dataQueries = new DAL.DataQueries();
+            return Json(dataQueries.GetDeviceById(id));
         }
 
-        // DELETE api/<controller>/5
-        public void Delete(int id)
+        [HttpPost]
+        public JsonResult<List<Device>> GetAllDevicesByName(string deviceName)
         {
+            var dataQueries = new DAL.DataQueries();
+            return Json(dataQueries.GetAllDevicesByName(deviceName));
         }
+
+        [HttpPost]
+        public JsonResult<List<Device>> GetAllDevicesFromDateToDate(DateTime fromDate, DateTime tillDate)
+        {
+            var dataQueries = new DAL.DataQueries();
+            return Json(dataQueries.GetAllDevicesFromDateToDate(fromDate,tillDate));
+        }
+
+
     }
 }

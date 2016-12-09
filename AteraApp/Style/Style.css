@@ -1,0 +1,9 @@
+﻿.deviceItem{
+    cursor: pointer;
+}
+.deviceName{
+    margin-bottom: 5px;
+}
+.deviceDetails{
+    margin-top: 10px;
+}

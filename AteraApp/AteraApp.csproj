@@ -136,6 +136,7 @@
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\Script.js" />
     <Content Include="Style\bootstrap.min.css" />
+    <Content Include="Style\Style.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>

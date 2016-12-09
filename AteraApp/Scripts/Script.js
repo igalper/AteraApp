@@ -1,12 +1,11 @@
 ﻿/// <reference path="angular.min.js" />
 var app = angular.module("AretaApp", [])
             .controller("AteraController", function ($scope, $http) {
-                $http.post(
-                    "/Devices"
+                $http.get(
+                    "/Devices/GetAllDevices"
                     )
                 .then(function (response) {
-                    debugger;
-                    $scope.devices = JSON.parse(response.data);
+                    $scope.devices = response.data;
                 }, function (e) {
                     alert(e);
                 });

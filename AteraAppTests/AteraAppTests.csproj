@@ -56,12 +56,17 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Controller\DevicesControllerTests.cs" />
+    <Compile Include="DataQueriesTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AteraApp\AteraApp.csproj">
       <Project>{1CFE058C-565E-4B27-A925-21E74FAFACBE}</Project>
       <Name>AteraApp</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{743CCBD0-C8CF-4530-A0FD-9DA4188D37EE}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
