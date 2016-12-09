@@ -49,5 +49,17 @@ namespace DAL
 
             return devicesList;
         }
+
+        public string GenerateDeviceUniqueName()
+        {
+            //TODO
+            return "";
+        }
+
+        public int DaysSinceDeviceWasCreated()
+        {
+            //TODO
+            return 0;
+        }
     }
 }

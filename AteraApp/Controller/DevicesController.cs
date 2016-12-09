@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using DAL.Models;
-
+using System.Web.Script.Serialization;
 
 
 namespace AteraApp
@@ -17,13 +17,17 @@ namespace AteraApp
         public string getAllDevices()
         {
             var dataQueries = new DAL.DataQueries();
-            var res = "";
-            foreach (Device d in dataQueries.GetAllDevices())
+            //var res = "";
+            /*foreach (Device d in dataQueries.GetAllDevices())
             {
                 res += "{" + d.ToString()+" },";
-            }
-            
-            return res;
+            }*/
+
+
+            JavaScriptSerializer js = new JavaScriptSerializer();
+            var json = js.Serialize(dataQueries.GetAllDevices());
+            return json;
+            //return res;
         }
         [Route("Devices/{id}")]
         [HttpPost]
