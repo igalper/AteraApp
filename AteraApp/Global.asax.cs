@@ -13,7 +13,7 @@ namespace AteraApp
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            GlobalConfiguration.Configuration.Routes.MapHttpRoute("Default", "{controller}/{id}", new { id = RouteParameter.Optional });
+            GlobalConfiguration.Configuration.Routes.MapHttpRoute("Default", "{controller}/{action}", new { id = RouteParameter.Optional });
         }
 
         protected void Session_Start(object sender, EventArgs e)

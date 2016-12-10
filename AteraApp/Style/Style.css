@@ -1,9 +1,31 @@
 ﻿.deviceItem{
     cursor: pointer;
+    position: relative;
 }
 .deviceName{
     margin-bottom: 5px;
 }
 .deviceDetails{
     margin-top: 10px;
+}
+.myContainer{
+    width:550px !important;
+}
+.nopadding {
+    padding: 0!important;
+    margin: 0!important;
+}
+.fright {
+    float: right;
+}
+.pright15 {
+    padding-right: 15px;
+}
+.device-list-icon {
+    position:absolute;
+    right: 10px;
+    top:0;
+    bottom:0;
+    margin:auto;
+    height:15px;
 }

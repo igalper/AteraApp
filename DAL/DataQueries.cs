@@ -10,11 +10,6 @@ namespace DAL
     public class DataQueries
     {
 
-
-        public DataQueries()
-        {
-        }
-
         public List<Device> GetDevicesByOwnerName(string ownerName)
         {
             List<Device> devicesList = new List<Device>();
@@ -61,9 +56,9 @@ namespace DAL
             using (var db = new MasterEntities())
             {
                 device =
-                       (Device)(from d in db.Devices
-                                where d.Id == id
-                                select d);
+                       (from d in db.Devices
+                        where d.Id == id
+                        select d).FirstOrDefault();
             }
             return device;
         }
@@ -92,7 +87,7 @@ namespace DAL
             return devicesList;
         }
 
-        public int GetNumberOfDevices()
+        public int getNumberOfDevices()
         {
             using (var db = new MasterEntities())
             {
