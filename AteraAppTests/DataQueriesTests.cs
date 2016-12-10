@@ -22,12 +22,9 @@ namespace DAL.Tests
                 Name = "Igal's Device",
                 Owner = "Igal"
             };
-
             DAL.DataQueries dal = new DAL.DataQueries();
-
             int days = dal.DaysSinceDeviceWasCreated(device);
             Console.WriteLine(days);
-
             Assert.IsTrue(days == 45);
         }
 
@@ -41,15 +38,9 @@ namespace DAL.Tests
                 Name = "Igal's Device",
                 Owner = "Igal"
             };
-
             string result = DAL.DataQueries.GenerateDeviceUniqueName(device);
-
-            //  Assert.IsInstanceOfType(result, T(string)
             Assert.IsFalse(string.IsNullOrEmpty(result));
             Assert.IsTrue(result == $"{device.Id}_{device.Name}_{device.Owner}_{device.Created}");
-
-
-
         }
 
     }
